@@ -1,0 +1,342 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Montserrat, sans-serif;
+  font-weight: 400;
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  animation: 3s forwards fadeInAnimation;
+}
+
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.whole {
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  display: flex;
+}
+
+nav {
+  z-index: 1;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 25px 30px;
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+nav .logo {
+  width: 90px;
+}
+
+nav ul {
+  display: flex;
+}
+
+nav ul li {
+  margin-left: 20px;
+  padding: 10px;
+  list-style: none;
+}
+
+nav ul li a {
+  color: #fff;
+  font-size: 25px;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  color: #c7c7c7;
+}
+
+.image-container {
+  filter: brightness(40%);
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.image-container img {
+  object-fit: cover;
+  width: 100%;
+  max-height: 400px;
+}
+
+.heading {
+  color: #f0f0f0;
+  font-size: 40px;
+  font-weight: 500px;
+  align-items: center;
+  display: flex;
+  position: absolute;
+  top: 22%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.heading h2 {
+  margin-left: 0;
+}
+
+.container {
+  max-width: 80%;
+  margin: auto;
+  padding: 20px;
+}
+
+.highlight-box {
+  background-color: #d9f2ff;
+  border-radius: 5px;
+  padding: 15px;
+  font-size: 20px;
+}
+
+.title {
+  margin-bottom: 10px;
+  font-size: 30px;
+}
+
+.itenary h3 {
+  font-size: 25px;
+}
+
+.highlight-box p {
+  font-size: 21px;
+}
+
+.day {
+  background: #fff;
+  border-left: 5px solid #00f;
+  padding: 5px;
+}
+
+.day h4 {
+  color: #000;
+  padding: 20px;
+  font-size: 29px;
+}
+
+.day p {
+  color: #4b4a4a;
+  padding: 15px;
+  font-size: 24px;
+}
+
+.box {
+  color: #fff;
+  border-radius: 5px;
+  padding: 15px;
+}
+
+.box-red, .box-orange, .box-green {
+  border-radius: 12px;
+  height: 360px;
+  margin-top: 10px;
+  font-size: 30px;
+}
+
+.box-red h3, .box-orange h3, .box-green h3 {
+  margin-top: 40px;
+  margin-left: 20px;
+  font-size: 30px;
+}
+
+.box-red p, .box-orange p, .box-green p {
+  font-size: 25px;
+}
+
+.box-red {
+  background-color: #d9534f;
+}
+
+.box-orange {
+  background-color: #f0ad4e;
+}
+
+.box-green {
+  background-color: #5cb85c;
+}
+
+footer {
+  color: #fff;
+  background-color: #0000;
+  background-image: linear-gradient(#000c, #000c), url("dal lake.95c1b2d3.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: scroll, scroll;
+  background-origin: padding-box, padding-box;
+  background-clip: border-box, border-box;
+  justify-content: space-around;
+  height: 300px;
+  margin-top: 60px;
+  padding: 30px;
+  font-size: 25px;
+  display: flex;
+}
+
+footer ul {
+  list-style-type: none;
+}
+
+footer ul li {
+  margin-bottom: 8px;
+}
+
+.column {
+  width: 27%;
+}
+
+p {
+  margin-bottom: 15px;
+  font-size: 30px;
+  font-weight: 400;
+}
+
+@media screen and (width <= 1024px) {
+  .heading {
+    font-size: 30px;
+    top: 15%;
+    left: 15%;
+  }
+
+  .container {
+    max-width: 90%;
+    margin: auto;
+  }
+
+  .whole {
+    flex-direction: column;
+  }
+}
+
+@media screen and (width <= 768px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+
+  .heading {
+    text-align: center;
+    font-size: 25px;
+    top: 10%;
+    left: 10%;
+  }
+
+  .container {
+    max-width: 95%;
+  }
+
+  .image-container img {
+    max-height: 300px;
+  }
+
+  .day h4 {
+    padding: 10px;
+    font-size: 24px;
+  }
+
+  .day p {
+    padding: 10px;
+    font-size: 20px;
+  }
+
+  .box-red, .box-orange, .box-green {
+    height: auto;
+    padding: 15px;
+    font-size: 24px;
+  }
+
+  .box-red h3, .box-orange h3, .box-green h3 {
+    font-size: 28px;
+  }
+
+  .box-red p, .box-orange p, .box-green p {
+    font-size: 22px;
+  }
+}
+
+@media screen and (width <= 480px) {
+  .heading {
+    text-align: center;
+    font-size: 20px;
+    top: 5%;
+    left: 5%;
+  }
+
+  nav ul li a {
+    font-size: 20px;
+  }
+
+  .container {
+    padding: 15px;
+  }
+
+  .day h4 {
+    padding: 8px;
+    font-size: 22px;
+  }
+
+  .day p {
+    padding: 8px;
+    font-size: 18px;
+  }
+
+  .box-red, .box-orange, .box-green {
+    height: auto;
+    padding: 10px;
+    font-size: 20px;
+  }
+
+  .box-red h3, .box-orange h3, .box-green h3 {
+    font-size: 26px;
+  }
+
+  .box-red p, .box-orange p, .box-green p {
+    font-size: 20px;
+  }
+}
+
+@media (width <= 1045px) {
+  .card {
+    width: calc(50% - 10px);
+    margin: 10px 0;
+  }
+}
+
+@media (width <= 700px) {
+  .card {
+    width: 100%;
+  }
+}
+/*# sourceMappingURL=index4.9d74510f.css.map */
